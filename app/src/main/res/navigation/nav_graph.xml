@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/entryScreen">
+    <fragment
+        android:id="@+id/entryScreen"
+        android:name="android.exercises.exe2.fragments.StartingFragment"
+        android:label="fragment_entry_screen"
+        tools:layout="@layout/fragment_entry_screen" >
+        <action
+            android:id="@+id/action_entryScreen_to_loginFormScreen"
+            app:destination="@id/loginFormScreen"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_entryScreen_to_registerFormScreen5"
+            app:destination="@id/registerFormScreen"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFormScreen"
+        android:name="android.exercises.exe2.fragments.LoginFormFragment"
+        android:label="fragment_login_form_screen"
+        tools:layout="@layout/fragment_login_form_screen" >
+        <action
+            android:id="@+id/action_loginFormScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_loginFormScreen_to_entryScreen"
+            app:destination="@id/entryScreen"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFormScreen"
+        android:name="android.exercises.exe2.fragments.RegisterFormFragment"
+        android:label="fragment_register_form_screen"
+        tools:layout="@layout/fragment_register_form_screen" >
+        <action
+            android:id="@+id/action_registerFormScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_registerFormScreen_to_entryScreen"
+            app:destination="@id/entryScreen"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="android.exercises.exe2.fragments.WelcomeFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" />
+</navigation>
